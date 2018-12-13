@@ -22,8 +22,9 @@ public class Knight extends Piece {
 
     @Override
     public boolean isValidPath(int x, int y) {
-        if(!super.isValidPath(x, y))
+        if (!super.isValidPath(x, y)) {
             return false;
+        }
         return (Math.abs(x - x_position) == 1 && Math.abs(y - y_position) == 2 || Math.abs(x - x_position) == 2 && Math.abs(y - y_position) == 1);
     }
 
@@ -37,15 +38,6 @@ public class Knight extends Piece {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public int getX_position() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public int getY_position() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
 
     @Override

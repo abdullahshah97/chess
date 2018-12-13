@@ -11,8 +11,8 @@ import Game.Player;
  *
  * @author abdullah
  */
-public class Queen extends Piece{
-    
+public class Queen extends Piece {
+
     private Type type;
 
     public Queen(int x, int y) {
@@ -23,14 +23,16 @@ public class Queen extends Piece{
     @Override
     public boolean isValidPath(int x, int y) {
         //move like rook or move like bishop, not both
-        if(!super.isValidPath(x, y))
+        if (!super.isValidPath(x, y)) {
             return false;
-        if(Math.abs(x - x_position) == Math.abs(y - y_position))
+        }
+        if (Math.abs(x - x_position) == Math.abs(y - y_position)) {
             return true;
-        else if(y == y_position && x != x_position)
+        } else if (y == y_position && x != x_position) {
             return true;
-        else if (y != y_position && x == x_position )
+        } else if (y != y_position && x == x_position) {
             return true;
+        }
         return false;
     }
 
@@ -45,16 +47,6 @@ public class Queen extends Piece{
     }
 
     @Override
-    public int getX_position() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public int getY_position() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
     public void setX_position(int x_position) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
@@ -63,7 +55,6 @@ public class Queen extends Piece{
     public void setY_position(int y_position) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
 
     @Override
     public boolean isOnBoard() {

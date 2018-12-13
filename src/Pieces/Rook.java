@@ -22,12 +22,14 @@ public class Rook extends Piece {
 
     @Override
     public boolean isValidPath(int x, int y) {
-        if(!super.isValidPath(x, y))
+        if (!super.isValidPath(x, y)) {
             return false;
-        if(y == y_position && x != x_position)
+        }
+        if (y == y_position && x != x_position) {
             return true;
-        else if (y != y_position && x == x_position )
+        } else if (y != y_position && x == x_position) {
             return true;
+        }
         return false;
     }
 
@@ -38,16 +40,6 @@ public class Rook extends Piece {
 
     @Override
     public Type getType() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public int getX_position() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public int getY_position() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -71,5 +63,4 @@ public class Rook extends Piece {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    
 }

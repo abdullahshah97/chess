@@ -31,8 +31,9 @@ public class Pawn extends Piece {
      */
     @Override
     public boolean isValidPath(int x, int y) {
-        if(!super.isValidPath(x, y))
+        if (!super.isValidPath(x, y)) {
             return false;
+        }
         if (Math.abs(y - y_position) == 1 && x == x_position) {
             return true;
         } else if (Math.abs(y - y_position) == 2 && firstMove == true && x == x_position) {
@@ -54,16 +55,6 @@ public class Pawn extends Piece {
 
     public boolean isFirstMove() {
         return firstMove;
-    }
-
-    @Override
-    public int getX_position() {
-        return x_position;
-    }
-
-    @Override
-    public int getY_position() {
-        return y_position;
     }
 
     public void setFirstMove(boolean firstMove) {
